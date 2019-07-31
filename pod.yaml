@@ -19,6 +19,9 @@ spec:
         image: nginx:1.7.9
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: "/var/www/html"
+          name: mypd
       volumes:
       - name: mypd
         persistentVolumeClaim:
